@@ -38,14 +38,17 @@ RANDOMCOLORS.addEventListener("click", setColor)
 
 /*classList Toggle Excercise*/
 function changeBtnStyle() {
-    const btn = document.querySelector(".button")
-    btn.classList.toggle("cool-btn");
-    btn.classList.toggle("glow"); // Toggles glow effect
+    const btn = document.querySelector(".button");
+    btn.classList.add("cool-btn");
+    btn.classList.toggle("glow"); 
 }   
 
 /*Dark Mode Excercise*/
 function switchMode()
 {
-    const btn = document.querySelector("light")
-    btn.classList.add("dark")
+    const btn = document.querySelector(".light");
+    btn.classList.add("dark");
+    btn.classList.toggle("light");
+    document.getElementById("lightSwitch").innerText = "Light Mode";
+    document.body.style.backgroundColor = "black";
 };
