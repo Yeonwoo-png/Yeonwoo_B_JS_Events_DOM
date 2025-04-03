@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function()
 
 let directionElement = document.getElementById("direction");
 
+
+/*Click Excercise*/
 document.addEventListener("keydown", function (e)
 {
     directionElement.innerText = `They key you pressed is ${e.keycode}`
@@ -19,6 +21,8 @@ document.addEventListener("click", function(e)
     clickMeElement.innerText = "You clicked me!"
 });
 
+
+/*Random Color Excercise*/
 function randomColorGenerator() 
 {
     return '#' + Math.floor(Math.random() * 16777215).toString(16)
@@ -27,8 +31,21 @@ function randomColorGenerator()
 function setColor()
 {
     return document.body.style.backgroundColor = randomColorGenerator()
-}
+};
 
 const RANDOMCOLORS = document.getElementById("randomColorBtn")
-
 RANDOMCOLORS.addEventListener("click", setColor)
+
+/*classList Toggle Excercise*/
+function changeBtnStyle() {
+    const btn = document.querySelector(".button")
+    btn.classList.toggle("cool-btn");
+    btn.classList.toggle("glow"); // Toggles glow effect
+}   
+
+/*Dark Mode Excercise*/
+function switchMode()
+{
+    const btn = document.querySelector("light")
+    btn.classList.add("dark")
+};
