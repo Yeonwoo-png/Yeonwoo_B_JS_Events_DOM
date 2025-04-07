@@ -46,9 +46,21 @@ function changeBtnStyle() {
 /*Dark Mode Excercise*/
 function switchMode()
 {
-    const btn = document.querySelector(".light");
-    btn.classList.add("dark");
-    btn.classList.toggle("light");
-    document.getElementById("lightSwitch").innerText = "Light Mode";
-    document.body.style.backgroundColor = "black";
+    const btn = document.querySelector("#lightSwitch");
+    if (btn.classList.contains("light"))
+    {
+        const btn = document.querySelector(".light");
+        btn.classList.add("dark");
+        btn.classList.toggle("light");
+        document.getElementById("lightSwitch").innerText = "Light Mode";
+        document.body.style.backgroundColor = "black";
+    }
+    else 
+    {
+        const btn = document.querySelector(".dark");
+        btn.classList.toggle("dark");
+        btn.classList.toggle("light");
+        document.getElementById("lightSwitch").innerText = "Dark Mode";
+        document.body.style.backgroundColor = "white";
+    }
 };
